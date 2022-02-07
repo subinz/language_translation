@@ -6,7 +6,7 @@ from transformers import FSMTForConditionalGeneration, FSMTTokenizer
 def translate_de_to_en(tokenizer, model, sentence):
     input_ids = tokenizer.encode(sentence, return_tensors="pt")
     outputs = model.generate(input_ids)
-    print(model.forward(input_ids)['logits'])
+    # print(model.forward(input_ids)['logits'])
     decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return decoded
 
