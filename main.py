@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import FSMTForConditionalGeneration, FSMTTokenizer
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
 
 def translate_de_to_en(tokenizer, model, sentence):
     input_ids = tokenizer.encode(sentence, return_tensors="pt")
