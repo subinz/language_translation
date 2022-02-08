@@ -15,7 +15,8 @@ def clear_form():
 
 
 def main():
-    mname = "facebook/wmt19-de-en"
+    # mname = "facebook/wmt19-de-en"
+    mname = "allenai/wmt19-de-en-6-6-base"
     tokenizer = FSMTTokenizer.from_pretrained(mname)
     model = FSMTForConditionalGeneration.from_pretrained(mname)
     st.set_page_config(layout="wide")
